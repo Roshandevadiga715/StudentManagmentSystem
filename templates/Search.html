@@ -1,0 +1,18 @@
+
+<html>
+    {% include "base.html" %}
+   <center><h1>{{title}}</h1>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+       </style>
+       
+
+<form method ='post'> {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">Search</button>
+
+</form>
+</center>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    {% include "base.html" %}
+   <center><h1>{{title}}</h1></center>
+   <style>
+    body {
+        background-color: lightblue;
+    }
+   </style>
+   
+
+<table align='center' border="2">
+    <thead>
+        <tr>
+            <td>S.No</td>
+            <td>Name</td>
+            <td>Class</td>
+            <td>Address</td>
+            <td>School</td>
+            <td>Email</td>
+        </tr>
+    </thead>
+    {% for k in queryset %}
+    <tbody>
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{ k.s_name }}</td>
+            <td>{{ k.s_class }}</td>
+            <td>{{ k.s_address }}</td>
+            <td>{{ k.s_school }}</td>
+            <td>{{ k.s_email }}</td>
+        </tr>
+    </tbody>
+    
+    {% endfor %}
+</table>
+</html>
